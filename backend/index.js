@@ -21,12 +21,12 @@ app.use(express.json());
 (async () => {
   try {
     await sequelize.authenticate();
-    console.log("✅ MySQL connected via Sequelize");
+    console.log("MySQL connected via Sequelize");
 
     await sequelize.sync();
-    console.log("✅ Database synced successfully!");
+    console.log("Database synced successfully!");
   } catch (err) {
-    console.error("❌ Database connection failed:", err.message);
+    console.error("Database connection failed:", err.message);
   }
 })();
 

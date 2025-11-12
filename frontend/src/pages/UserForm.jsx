@@ -3,7 +3,7 @@ import axiosInstance from "../api/axiosInstance.js";
 import Loader from "../components/Loader.jsx";
 
 export default function UserForm({ userToEdit = null, onSuccess, onCancel }) {
-  // ✅ Initial state
+  // Initial state
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -13,7 +13,7 @@ export default function UserForm({ userToEdit = null, onSuccess, onCancel }) {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
-  // ✅ Pre-fill when editing
+  // Pre-fill when editing
   useEffect(() => {
     if (userToEdit) {
       setForm({
